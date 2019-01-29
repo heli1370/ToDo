@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ToDo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<div class="header">
+  <h1>todos</h1>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="mainUL">
+  <li>Design Home page</li>
+  <li class="checked">Review code</li>
+  <li>Dynamic footer</li>
+</ul>
+
+<hr>
+<div class="configPart">
+  <div id="leftOver"></div>
+  <div class="filter">
+    <span id="all" class="selected" onclick="viewAll()">All</span>
+    <span id="active" onclick="active()">Active</span>
+    <span id="completed" onclick="completed()">Completed</span>
+  </div>
+  <div id="clearCompleted" onclick="clearCompleted()">Clear Completed</div>
+</div>
+
+
+<script src="vanilla.js"></script>
+</body>
+</html>
