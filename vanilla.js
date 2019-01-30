@@ -1,3 +1,4 @@
+
 // Create a "close" button and append it to each list item in load page
 var myNodelist = document.getElementsByTagName("LI");
 for (i = 0; i < myNodelist.length; i++) {
@@ -6,6 +7,7 @@ for (i = 0; i < myNodelist.length; i++) {
   span.className = "close";
   span.appendChild(txt);
   myNodelist[i].appendChild(span);
+
 }
 
 // Click on a close button to hide the current list item
@@ -14,7 +16,7 @@ for (i = 0; i < close.length; i++) {
   close[i].onclick = function() {
     var div = this.parentElement;
     div.style.display = "none";
-  }
+  };
 }
 // Add a "checked" symbol when clicking on a list item
 var list = document.querySelector('ul');
@@ -78,17 +80,6 @@ function completed() {
 function clearCompleted() {
   var check = document.getElementsByClassName("checked");
   for (i = 0; i < check.length; i++) {
-    console.log(check.length);
     check[i].style.display = 'none';
-  }
-}
-var liNumber = document.getElementById("mainUL").getElementsByTagName("li").length;
-var check = document.getElementsByClassName("checked").length;
-// console.log(liNumber-check);
-// document.getElementById("leftOver").innerHTML = (liNumber-check) + " items left";
-for (i=0; i<liNumber; i++){
-  for(j=0; j<check; j++){
-    console.log(i-j)
-    // document.getElementById("leftOver").innerHTML = (liNumber[i]-check[j]) + " items left";
   }
 }
